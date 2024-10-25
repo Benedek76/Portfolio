@@ -58,14 +58,11 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-              <li><a href="{{ url_for('html_page', page_name='work-website-flask.html') }}" title="">001</a></li>
-              <li><a href="{{ url_for('html_page', page_name='work-website-laravel-riel.html') }}" title="">002</a></li>
-              <li><a href="{{ url_for('html_page', page_name='work-website-laravel-ph.html') }}" title="">003</a></li>
-              <li><a href="{{ url_for('html_page', page_name='work-website-trendy.html') }}" title="">004</a></li>
-              <li><a href="{{ url_for('html_page', page_name='work-website-green.html') }}" title="">005</a></li>
-              <li><a href="{{ url_for('html_page', page_name='work-website-react.html') }}" title="">006</a></li>
-              <li><a href="{{ url_for('html_page', page_name='work-website-wp-hype.html') }}" title="" class="active">007</a></li>
-              <li><a href="{{ url_for('html_page', page_name='work-website-wp-grace.html') }}" title="">008</a></li>
+              <li><a href="{{ url_for('html_page', page_name='work-software-python.html') }}" title="" class="active">001</a></li>
+              <li><a href="{{ url_for('html_page', page_name='work-software-dice.html') }}" title="">002</a></li>
+              <li><a href="{{ url_for('html_page', page_name='work-software-pdf.html') }}" title="">003</a></li>
+              <li><a href="{{ url_for('html_page', page_name='work-software-lp.html') }}" title="">004</a></li>
+              <li><a href="{{ url_for('html_page', page_name='work-software-wp.html') }}" title="">005</a></li>
             </ul>
           </div>
         </div>
@@ -76,46 +73,44 @@
         <div class="row">
           <div class="col-xs-12">
             <img
-              src="{{ url_for('static', filename='assets/images/portfolio/hy/image-3.png')}}"
+              src="{{ url_for('static', filename='assets/images/portfolio/python/image-1.png')}}"
               class="img-responsive"
-              alt="Enlite energy drink's product page"
+              alt="Office Portal login page"
             />
             <div class="card-container">
               <div class="text-center">
                 <h1 class="h2">
-                  007 : Hype Energy Drink Company Website development.
+                  001 : Office Portal - Document Comparison Tool
                 </h1>
               </div>
               <p>
-                The purpose of this project was to develop a
-                <b>modern website</b> that aligns with the
-                <b>refreshed (2023)</b> online branding of Hype Energy Drink.
-                The goal was to present the newly introduced sports nutrition
-                products in a high-quality manner. A requirement of the project
-                was the use of the <b>WordPress framework</b>, but I also had
-                the opportunity to implement
-                <b
-                  >numerous custom code and scripts using PHP and JavaScript.</b
-                >
-                These included: <br />A <b>custom background</b> linear gradient
-                that is <b>triggered upon user scrolling,</b> utilizing
-                <b>JavaScript.</b><br /><b> Drop-down fields</b> on product
-                pages to display product-specific information, such as the
-                ingredients table and ingredient list. <br /><b
-                  >Creation of tailored HTML tables</b
-                >
-                for each product. <br /><b>A custom footer</b> developed using
-                HTML5, CSS3, and PHP. <br />A custom
-                <b>responsive menu</b> design. The main
-                <b>WordPress plugins</b> used were <b>Instagram Feeding</b> for
-                the sincronize with the Instagram and <b>Motion Page</b> for
-                animations.<br /><b>Multilanguage feature</b> for several
-                language.<br /><b>Additionally</b>, I implemented a
-                <b>custom loop grid</b> for News Posts. <br /><b
-                  >I carried out full SEO optimization</b
-                >
-                with the help of an SEO plugin.<br />><a
-                  href="https://hype.com/"
+                This <b>Python - Flask project</b> implements a corporate <b>Office Portal</b>, which offers <b>various/</b> tools and <b>programs</b> for internal company use. One of the primary tools available in this portal is a <b>PDF document comparison tool</b>, which <b>compares</b> uploaded <b>PDF files</b> against a master <b>DOCX file</b> and visually displays the <b>differences</b> on the web interface.
+
+                The comparison is <b>highlighted</b> with green for similarities and red for <b>differences</b>, allowing users to quickly identify changes between the two documents.
+
+                Additionally, the portal includes a <b>login system</b> that ensures secure access to the tools, utilizing <b>hashed passwords</b> for authentication.
+                <br /><br />
+                <b>Features:</b><br />
+                <b>1. Document Comparison</b><br />
+                - Functionality: <b>Compares</b> a user-uploaded PDF document with a master DOCX file.<br />
+                - Visual Differences: Green highlights <b>indicate matching</b> content between the PDF and the DOCX.
+                Red highlights <b>indicate differing</b> content.<br />
+                - Supported Formats:
+                Input: <b>.pdf</b> (user-uploaded document) and <b>.docx</b> (master document).<br />
+                <b>2. Login System</b><br />
+                - Secure Authentication: Users must log in to access the tools within the portal.<br />
+                - Password Hashing: Passwords are stored securely using <b>bcrypt hashing</b>, ensuring that user credentials are not stored in plain text.<br />
+                - User Sessions: After login, the user's session is maintained, and they can access the comparison tool until they log out.<br />
+                <b>3. Cache Control and Session Handling</b><br />
+                - Session Management: The session is cleared after logging out, and the cache is invalidated to prevent unauthorized access using browser navigation (e.g., back button).<br />
+                - No Caching: Ensures that sensitive data is not stored or accessible after logout by disabling page caching.<br />
+                <b>4. Error Handling and File Validation</b><br />
+                - File Type Validation: The system validates the file formats before processing, ensuring that only <b>PDF</b> and <b>DOCX files</b> are allowed. If the files are of an unsupported format, users receive an error message.<br />
+                - Error Feedback: If an error occurs (e.g., missing file, incorrect format), the user is notified with a clear message via the Flask flash mechanism.<br />
+                <b>5. Visual and User-Friendly Interface</b>
+                - Intuitive Interface: The user interface is designed for simplicity and ease of use, making it easy for employees to upload and compare documents.<br />
+                - Responsive Design: The interface is responsive, making it accessible from different devices, including desktops and mobile devices.
+                <br />><a href="https://office.hype-ip.com/"
                   ><b>Visit website</b></a
                 ><
               </p>
@@ -126,28 +121,28 @@
             <div class="row">
               <div class="col-xs-12 col-md-6">
                 <img
-                  src="{{ url_for('static', filename='assets/images/portfolio/hy/image-2.png')}}"
+                  src="{{ url_for('static', filename='assets/images/portfolio/python/image-4.png')}}"
                   class="img-responsive"
-                  alt="Watermelon Product Page"
+                  alt="Comparing Result Page"
                 />
-                <p>Watermelon Product Page</p>
+                <p>Comparing Result Page</p>
               </div>
               <div class="col-xs-12 col-md-6">
                 <img
-                  src="{{ url_for('static', filename='assets/images/portfolio/hy/image-4.png')}}"
+                  src="{{ url_for('static', filename='assets/images/portfolio/python/image-3.png')}}"
                   class="img-responsive"
-                  alt="Blueberry energy drink's Product Page"
+                  alt="Dashboard of the applications"
                 />
-                <p>Blueberry Product Page</p>
+                <p>Dashboard</p>
               </div>
             </div>
           </div>
 
           <div class="col-xs-12">
             <img
-              src="{{ url_for('static', filename='assets/images/portfolio/hy/image-1.png')}}"
+              src="{{ url_for('static', filename='assets/images/portfolio/python/image-2.png')}}"
               class="img-responsive"
-              alt="Image Video on the home page. "
+              alt="Document comparison and Price Proposal apps"
             />
           </div>
         </div>

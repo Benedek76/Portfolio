@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+
+# HTML files
+components.html
+
+# IDE specific (PyCharm)
+.idea/
